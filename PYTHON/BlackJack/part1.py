@@ -34,7 +34,7 @@ def BlackJack():
             is_game_over=True
         elif game=="N":
             is_game_over=True
-    while calculate_score(computer_cards)<17 and n>=1:
+    while calculate_score(computer_cards)<17 and n>=1 and calculate_score(computer_cards)!= 0:
         computer_cards.append(random.choice(cards))
         calculate_score(computer_cards)
     print("------------------------------------")
