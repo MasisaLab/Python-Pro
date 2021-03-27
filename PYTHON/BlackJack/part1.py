@@ -60,6 +60,6 @@ def BlackJack():
     init=input("Quiere seguir Jugando Y O N : ")
     if init=="Y":
         BlackJack()
-    if init=="N" :
+    elif init=="N" :
         return "Hasta la proxima"
 BlackJack()
