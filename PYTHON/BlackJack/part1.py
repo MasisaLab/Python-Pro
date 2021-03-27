@@ -1,4 +1,6 @@
 from art import logo
+from art import logos
+from art import dibujo
 import random
 def BlackJack():
     print(logo)
@@ -25,7 +27,13 @@ def BlackJack():
     while is_game_over==False :
         n+=1
         print(f"tus cartas {user_cards}, tu puntaje {calculate_score(user_cards)}")
+        print(logos["p1"])
+        print("\n")
+        dibujo(user_cards)
         print(f"la primera carta de la computadora es {computer_cards[0]}")
+        print(logos["p2"])
+        print("\n")
+        dibujo([computer_cards[0]])
         game=input("escribe Y para recibir una carta o N para terminar el juego : ")
         if game=="Y":
             user_cards.append(random.choice(cards))
@@ -55,7 +63,13 @@ def BlackJack():
             print("You lose, 😤")
     compare(calculate_score(user_cards),calculate_score(computer_cards))
     print(f"tus cartas {user_cards}, tu puntaje {calculate_score(user_cards)}")
+    print(logos["p1"])
+    print("\n")
+    dibujo(user_cards) 
     print(f"la carta de la computadora es {computer_cards}, su puntaje {calculate_score(computer_cards)}")
+    print(logos["p2"])
+    print("\n")
+    dibujo(computer_cards)
     print("------------------------------------")
     init=input("Quiere seguir Jugando Y O N : ")
     if init=="Y":
