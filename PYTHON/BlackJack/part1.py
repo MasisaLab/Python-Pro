@@ -37,34 +37,26 @@ def BlackJack():
     while calculate_score(computer_cards)<17 and n>=1:
         computer_cards.append(random.choice(cards))
         calculate_score(computer_cards)
+    print("------------------------------------")
     def compare(c1,c2):
         if c2==c1 :
             print("Empataron 🙃")
         elif c2==0  : 
             print("you Lose, tu oponente saco BalckJack 😱")
-            print(f"tus cartas {user_cards}, tu puntaje {calculate_score(user_cards)}")
-            print(f"la carta de la computadora es {computer_cards}, su puntaje {calculate_score(computer_cards)}")
         elif c1==0:
             print("You Win, Sacastes BlackJack 😎")
-            print(f"tus cartas {user_cards}, tu puntaje {calculate_score(user_cards)}")
-            print(f"la carta de la computadora es {computer_cards}, su puntaje {calculate_score(computer_cards)}")
         elif c1>21 :
             print("You Lose, 😭")
-            print(f"tus cartas {user_cards}, tu puntaje {calculate_score(user_cards)}")
-            print(f"la carta de la computadora es {computer_cards}, su puntaje {calculate_score(computer_cards)}")
         elif c2>21 :
              print("You Win, 😁")
-             print(f"tus cartas {user_cards}, tu puntaje {calculate_score(user_cards)}")
-             print(f"la carta de la computadora es {computer_cards}, su puntaje {calculate_score(computer_cards)}")
         elif c1>c2 :
              print("You Win, 😃")
-             print(f"tus cartas {user_cards}, tu puntaje {calculate_score(user_cards)}")
-             print(f"la carta de la computadora es {computer_cards}, su puntaje {calculate_score(computer_cards)}")
         else :
             print("You lose, 😤")
-            print(f"tus cartas {user_cards}, tu puntaje {calculate_score(user_cards)}")
-            print(f"la carta de la computadora es {computer_cards}, su puntaje {calculate_score(computer_cards)}")
     compare(calculate_score(user_cards),calculate_score(computer_cards))
+    print(f"tus cartas {user_cards}, tu puntaje {calculate_score(user_cards)}")
+    print(f"la carta de la computadora es {computer_cards}, su puntaje {calculate_score(computer_cards)}")
+    print("------------------------------------")
     init=input("Quiere seguir Jugando Y O N : ")
     if init=="Y":
         BlackJack()
